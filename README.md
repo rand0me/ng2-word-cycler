@@ -1,4 +1,4 @@
-# My Angular2 Module
-[![Build Status](https://travis-ci.org/me/ng2-module.svg?branch=master)](https://travis-ci.org/me/ng2-module)
+# Angular 2 Animated text effect
+[![Build Status](https://travis-ci.org/rand0me/ng2-word-cycler.svg?branch=master)](https://travis-ci.org/rand0me/ng2-word-cycler)
 
 Status: Alpha

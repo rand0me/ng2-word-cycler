@@ -25,7 +25,6 @@ module.exports = function(config) {
       ...getAngularFiles(['core','common','compiler','platform-browser','platform-browser-dynamic']),
 
       'karma-test-shim.js',
-      'node_modules/firebase/firebase.js',
       'dist/bundles/test-root.umd.{js,map}',
     ],
 
