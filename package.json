@@ -1,6 +1,6 @@
 {
   "name": "ng2-word-cycler",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "A simple angular2 module",
   "main": "bundles/ng2-word-cycler.umd.js",
   "module": "index.js",
