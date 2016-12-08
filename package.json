@@ -11,11 +11,11 @@
     "delayed_rollup": "sleep 5 && rollup --watch -c rollup.test.config.js",
     "build:watch": "rm -rf dist && concurrently \"tsc -w\" \"npm run delayed_rollup\"",
     "build": "rm -rf dist && tsc && rollup -c rollup.test.config.js",
-    "build_npm": "rm -rf dist && ngc -p tsconfig.publish.es6.json && rollup -c rollup.publish.config.js && npm run postbuild_npm",
-    "postbuild_npm": "cp package.json README.md .npmignore dist/ && npm run rewrite_npm_package",
+    "build:npm": "rm -rf dist && ngc -p tsconfig.publish.es6.json && rollup -c rollup.publish.config.js",
+    "postbuild:npm": "cp package.json README.md .npmignore dist/ && npm run rewrite_npm_package",
     "rewrite_npm_package": "node tools/rewrite-published-package.js",
     "e2e_test": "webdriver-manager update && npm run build_e2e && protractor",
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "version": "conventional-changelog -i CHANGELOG.md -s -r 0"
   },
   "keywords": [
     "angular2",
@@ -44,7 +44,6 @@
   "devDependencies": {
     "@angular/compiler-cli": "^2.0.0",
     "@angular/platform-server": "^2.0.0-rc.5",
-    "@types/request": "0.0.30",
     "concurrently": "^2.2.0",
     "conventional-changelog-cli": "^1.2.0",
     "es6-module-loader": "^0.17.10",
