@@ -15,7 +15,8 @@
     "postbuild:npm": "cp package.json README.md .npmignore dist/ && npm run rewrite_npm_package",
     "rewrite_npm_package": "node tools/rewrite-published-package.js",
     "e2e_test": "webdriver-manager update && npm run build_e2e && protractor",
-    "version": "conventional-changelog -i CHANGELOG.md -s -r 0"
+    "version": "conventional-changelog -i CHANGELOG.md -s -r 0",
+    "postversion": "npm run build:npm"
   },
   "keywords": [
     "angular2",
