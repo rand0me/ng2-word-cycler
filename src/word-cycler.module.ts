@@ -1,5 +1,5 @@
-import { NgModule }     from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule, ModuleWithProviders } from '@angular/core';
+import { CommonModule }                  from '@angular/common';
 
 import { WordCyclerComponent }    from './word-cycler.component';
 
@@ -8,4 +8,8 @@ import { WordCyclerComponent }    from './word-cycler.component';
   exports: [ WordCyclerComponent ],
   declarations: [ WordCyclerComponent ]
 })
-export class WordCyclerModule {}
+export class WordCyclerModule {
+  static forRoot(): ModuleWithProviders {
+    return { ngModule: WordCyclerModule };
+  }
+}
